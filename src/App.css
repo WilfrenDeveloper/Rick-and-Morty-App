@@ -1,12 +1,13 @@
 .App__figure,
 .App__img{
   width: 100vw;
-  min-width: 400px;
+  position: center;
 }
 
 .container{
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 .App__section{
@@ -58,8 +59,13 @@
 }
 
 @media (max-width: 380px) {
-  .App__section{
+
+  .container{
     width: 90vw;
+  }
+
+  .App__form{
+    width: 95vw;
   }
   
 }

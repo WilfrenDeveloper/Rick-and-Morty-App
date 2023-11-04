@@ -34,3 +34,14 @@
     text-align: center;
     font-weight: var(--light);
 }
+
+@media (max-width: 380px) {
+    .Info__article{
+        width: 260px;
+    }
+
+    .Info__ul{
+        display: flex;
+        flex-grow: wrap row;
+    }
+}

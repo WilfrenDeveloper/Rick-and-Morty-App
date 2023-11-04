@@ -9,6 +9,8 @@ function App() {
 
   const [locationId, setLocationId] = useState(Math.floor(Math.random() * 126) + 1)
 
+  
+
   const url = `https://rickandmortyapi.com/api/location/${locationId}`
   const [location, getLocation, isLoading, hasError] = useFetch(url)
 
@@ -40,7 +42,7 @@ function App() {
           {
             isLoading
               ? <h2 className='App__loading'>Loading...</h2>
-              : hasError || locationId === '0'
+              : hasError || locationId === '0' || locationId === ''
                 ? <h2 className='App__error'>❌Hey! you must provide an id from 1 to 126</h2>
                 : (<>
                   <InfoLocation
