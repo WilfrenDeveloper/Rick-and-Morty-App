@@ -26,37 +26,44 @@ function App() {
 
 
   return (
-    <section>
-      <h1>Rick and Morty</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" ref={inputLocation} />
-        <button>Search</button>
-      </form>
+    <>
+      <figure className='App__figure'>
+        <img className='App__img' src="https://islideusa.com/cdn/shop/collections/Rick_and_Morty_Collection_Header_1600x.progressive.png.jpg?v=1624448995" alt="Rick and Morty" />
+      </figure>
+      <div className='container'>
+        <section className='App__section'>
+          <form className='App__form' onSubmit={handleSubmit}>
+            <input className='App__input' type="text" ref={inputLocation} />
+            <button className='App__button'>Search</button>
+          </form>
 
-      {
-        isLoading
-          ? <h2>Loading...</h2>
-          : hasError || locationId === '0'
-            ? <h2>❌Hey! you must provide an id from 1 to 126</h2>
-            : (<>
-              <InfoLocation
-                location={location}
-              />
-              <div>
-                {
-                  location?.residents.map(url => (
-                    <CardResidents
-                      key={url}
-                      location={location}
-                      url={url}
-                    />
-                  ))
-                }
-              </div>
-            </>
-      )}
+          {
+            isLoading
+              ? <h2 className='App__loading'>Loading...</h2>
+              : hasError || locationId === '0'
+                ? <h2 className='App__error'>❌Hey! you must provide an id from 1 to 126</h2>
+                : (<>
+                  <InfoLocation
+                    location={location}
+                  />
+                  <div className='App__div'>
+                    {
+                      location?.residents.map(url => (
+                        <CardResidents
+                          key={url}
+                          location={location}
+                          url={url}
+                        />
+                      ))
+                    }
+                  </div>
+                </>
+                )
+          }
 
-    </section>
+        </section>
+      </div>
+    </>
   )
 }
 

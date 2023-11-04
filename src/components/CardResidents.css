@@ -1,0 +1,82 @@
+.Card__article{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--greenCard);
+}
+
+.Card__article:hover{
+    box-shadow: 0 0 5px gray;
+}
+
+.Card__header{
+    position: relative;
+}
+
+.Card__div{
+    background-color: var(--greenCard);
+    position: absolute;
+    top: 20px;
+    width: 95px;
+    height: 25px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: var(--light);
+}
+
+.Card__circle{
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.Alive{
+ background-color: green;
+}
+
+.Dead{
+    background-color: rgb(134, 0, 0);
+}
+
+.Card__h3{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.Card__hr{
+    color: rgb(83, 81, 81);
+}
+
+.Card__ul{
+    margin: 10px 0 20px 0;
+}
+
+.Card__li{
+    display: flex;
+    flex-direction: column;
+}
+
+.Card__span--label{
+    margin: 0 50px;
+    font-weight: var(--light);
+}
+
+.Card__span--value{
+    margin: 6px 30px;
+}
+
+@media (max-width: 380px) {
+    .Card__article{
+        width: 90vw;
+    }
+    
+    .Card__img{
+        width: 100%;
+    }
+}

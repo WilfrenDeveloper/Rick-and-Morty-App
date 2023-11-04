@@ -1,0 +1,36 @@
+.Info__article{
+    background-color: var(--greenCard);
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    padding: 15px;
+}
+
+.Info__h2{
+    display: block;
+    text-align: center;
+    color: var(--greenButton);
+    margin-bottom: 10px;
+}
+
+.Info__ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px
+
+}
+
+.Info__li{
+    display: flex;
+    flex-direction: column;
+}
+
+.Info__span--label{
+    text-align: center;
+    font-weight: var(--bold);
+}
+
+.Info__span--value{
+    text-align: center;
+    font-weight: var(--light);
+}

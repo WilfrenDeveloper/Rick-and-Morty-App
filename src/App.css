@@ -1,31 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+.App__figure,
+.App__img{
+  width: 100vw;
+  min-width: 400px;
+}
 
-*{
-  box-sizing: border-box;
+.container{
+  display: flex;
+  justify-content: center;
 }
-html{
-  font-family:  'Lato', sans-serif;
+
+.App__section{
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body{
-  margin: 0;
+
+.App__form{
+  width: 300px;
+  height: 25px;
+  display: flex;
+  margin: 40px 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
-input{
-  font-family: inherit;
+
+.App__form:hover{
+  box-shadow: 0 0 8px grey;
 }
-button{
-  font-family: inherit;
+
+.App__input{
+  color: black;
+  padding: 8px;
+  width: 300px;
+  border: none;
+}
+
+.App__button{
+  background-color: var(--greenButton);
+  width: 100px;
+  border: none;
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-ul,
-hr {
-  margin-top: 0;
-  margin-bottom: 0;
+.App__loading,
+.App__error{
+  text-align: center;
 }
-img{
-  width: 100%;
-  display: block;
+
+.App__div{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+@media (max-width: 380px) {
+  .App__section{
+    width: 90vw;
+  }
+  
 }
